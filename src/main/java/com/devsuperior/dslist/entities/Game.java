@@ -9,10 +9,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_game")
-
 public class Game {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
    private String title;
 
@@ -22,7 +21,7 @@ public class Game {
    private String platforms;
    private Double score;
    private String imgUrl;
-   
+
    @Column(columnDefinition = "TEXT")
    private String shortDescription;
 
@@ -141,8 +140,6 @@ public class Game {
         } else if (!id.equals(other.id))
             return false;
         return true;
-    }
-    
-    
+    }   
     
 }
